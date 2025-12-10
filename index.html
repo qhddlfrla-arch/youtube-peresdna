@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Meta Tags -->
+    <title>유튜브 영상 분석 AI - 영상 대본의 비밀 파해치기+모방</title>
+    <meta
+      name="description"
+      content="AI가 분석한 영상 대본의 공식! 1분 만에 성공 영상 분석, 조회수 예측, 맞춤형 대본까지. 완전 무료로 시작하세요."
+    />
+    <meta
+      name="keywords"
+      content="유튜브 분석, 영상 대본, AI 분석, 조회수 예측, 썸네일 생성, 영상 기획, 콘텐츠 분석, 무료 유튜브 도구"
+    />
+    <meta name="author" content="YouTube Analyze" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://your-domain.com/"
+    />
+    <meta
+      property="og:title"
+      content="유튜브 영상 분석 AI - 영상 대본의 비밀 파해치기+모방"
+    />
+    <meta
+      property="og:description"
+      content="AI가 분석한 영상 대본의 공식! 1분 만에 성공 영상 분석, 조회수 예측, 맞춤형 대본까지. 완전 무료, 지금 바로 시작하세요"
+    />
+    <meta
+      property="og:image"
+      content="https://your-domain.com/og-image.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://your-domain.com/"
+    />
+    <meta
+      property="twitter:title"
+      content="유튜브 영상 분석 AI - 영상 대본의 비밀 파해치기+모방"
+    />
+    <meta
+      property="twitter:description"
+      content="AI가 분석한 영상 대본의 공식! 1분 만에 성공 영상 분석, 조회수 예측, 맞춤형 대본까지. 완전 무료, 지금 바로 시작하세요"
+    />
+    <meta
+      property="twitter:image"
+      content="https://your-domain.com/og-image.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.svg" />
+    <link rel="shortcut icon" href="/favicon.svg" />
+
+    <!-- Google AdSense - 본인의 애드센스 코드로 교체하세요 -->
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR-ADSENSE-ID"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/",
+          "react/": "https://aistudiocdn.com/react@^19.1.1/",
+          "react": "https://aistudiocdn.com/react@^19.1.1",
+          "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+          "react-markdown": "https://aistudiocdn.com/react-markdown@^9.0.1",
+          "remark-gfm": "https://aistudiocdn.com/remark-gfm@^4.0.0"
+        }
+      }
+    </script>
+    <link rel="stylesheet" href="/index.css" />
+
+    <!-- 강력한 복사/드래그 방지 CSS -->
+    <style>
+      /* 허용된 입력 필드들 - 최우선 순위 */
+      .api-key-modal input,
+      .api-key-modal textarea,
+      .api-key-modal input[type="text"],
+      .api-key-modal input[type="password"],
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="number"],
+      input[type="url"],
+      textarea,
+      .editable-content,
+      [contenteditable="true"] {
+        -webkit-user-select: text !important;
+        -moz-user-select: text !important;
+        -ms-user-select: text !important;
+        user-select: text !important;
+        -webkit-touch-callout: default !important;
+      }
+
+      /* 나머지 모든 요소 - 복사/드래그 방지 */
+      * {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+      }
+
+      /* 텍스트 선택 색상 제거 */
+      *::selection {
+        background: transparent;
+        color: inherit;
+      }
+
+      *::-moz-selection {
+        background: transparent;
+        color: inherit;
+      }
+
+      /* 이미지 드래그 방지 */
+      img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        user-drag: none;
+        pointer-events: none;
+      }
+
+      /* 링크는 클릭 가능하도록 */
+      a {
+        pointer-events: auto;
+      }
+
+      /* 버튼과 입력 필드는 상호작용 가능하도록 */
+      button,
+      input,
+      select,
+      textarea {
+        pointer-events: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+
+    <!-- 복사 방지 JavaScript -->
+    <script>
+      // 우클릭 방지
+      document.addEventListener("contextmenu", (e) => {
+        // 입력 필드에서는 우클릭 허용
+        if (
+          e.target.tagName === "INPUT" ||
+          e.target.tagName === "TEXTAREA" ||
+          e.target.isContentEditable
+        ) {
+          return;
+        }
+        e.preventDefault();
+      });
+
+      // 복사 방지
+      document.addEventListener("copy", (e) => {
+        // 입력 필드에서는 복사 허용
+        if (
+          e.target.tagName === "INPUT" ||
+          e.target.tagName === "TEXTAREA" ||
+          e.target.isContentEditable ||
+          e.target.closest(".api-key-modal")
+        ) {
+          return;
+        }
+        e.preventDefault();
+      });
+
+      // 드래그 방지
+      document.addEventListener("dragstart", (e) => {
+        if (e.target.tagName === "IMG") {
+          e.preventDefault();
+        }
+      });
+
+      // 키보드 단축키 방지 (Ctrl+C, Ctrl+A, Ctrl+U 등)
+      document.addEventListener("keydown", (e) => {
+        // 입력 필드에서는 단축키 허용
+        if (
+          e.target.tagName === "INPUT" ||
+          e.target.tagName === "TEXTAREA" ||
+          e.target.isContentEditable ||
+          e.target.closest(".api-key-modal")
+        ) {
+          return;
+        }
+
+        // Ctrl/Cmd + C (복사)
+        if ((e.ctrlKey || e.metaKey) && e.key === "c") {
+          e.preventDefault();
+        }
+        // Ctrl/Cmd + A (전체 선택)
+        if ((e.ctrlKey || e.metaKey) && e.key === "a") {
+          e.preventDefault();
+        }
+        // Ctrl/Cmd + U (소스 보기)
+        if ((e.ctrlKey || e.metaKey) && e.key === "u") {
+          e.preventDefault();
+        }
+        // Ctrl/Cmd + S (저장)
+        if ((e.ctrlKey || e.metaKey) && e.key === "s") {
+          e.preventDefault();
+        }
+        // F12 (개발자 도구)
+        if (e.key === "F12") {
+          e.preventDefault();
+        }
+        // Ctrl+Shift+I (개발자 도구)
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "I") {
+          e.preventDefault();
+        }
+        // Ctrl+Shift+J (콘솔)
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "J") {
+          e.preventDefault();
+        }
+        // Ctrl+Shift+C (요소 선택)
+        if ((e.ctrlKey || e.metaKey) && e.shiftKey && e.key === "C") {
+          e.preventDefault();
+        }
+      });
+
+      // 개발자 도구 열림 감지 (간단한 방법)
+      (function () {
+        const devtools = /./;
+        devtools.toString = function () {
+          this.opened = true;
+        };
+        const checkDevTools = () => {
+          if (devtools.opened) {
+            // 개발자 도구가 열렸을 때의 동작
+            console.clear();
+            devtools.opened = false;
+          }
+        };
+        setInterval(checkDevTools, 1000);
+      })();
+
+      // 선택 영역 제거
+      document.addEventListener("selectstart", (e) => {
+        // 입력 필드에서는 선택 허용
+        if (
+          e.target.tagName === "INPUT" ||
+          e.target.tagName === "TEXTAREA" ||
+          e.target.isContentEditable ||
+          e.target.closest(".api-key-modal")
+        ) {
+          return;
+        }
+        e.preventDefault();
+      });
+
+      // 모바일 길게 누르기 방지
+      let pressTimer;
+      document.addEventListener("touchstart", (e) => {
+        if (
+          e.target.tagName === "INPUT" ||
+          e.target.tagName === "TEXTAREA" ||
+          e.target.isContentEditable
+        ) {
+          return;
+        }
+        pressTimer = setTimeout(() => {
+          e.preventDefault();
+        }, 500);
+      });
+
+      document.addEventListener("touchend", () => {
+        clearTimeout(pressTimer);
+      });
+
+      document.addEventListener("touchmove", () => {
+        clearTimeout(pressTimer);
+      });
+    </script>
+
+    <!-- 콘솔 경고 메시지 -->
+    <script>
+      console.log(
+        "%c⚠️ 경고!",
+        "color: red; font-size: 40px; font-weight: bold;"
+      );
+      console.log(
+        "%c이 콘솔 기능은 개발자를 위한 것입니다.",
+        "font-size: 18px;"
+      );
+      console.log(
+        "%c누군가 여기에 코드를 붙여넣으라고 했다면, 그것은 사기입니다!",
+        "font-size: 16px; color: red;"
+      );
+      console.log(
+        "%c자신이 무엇을 하는지 정확히 알지 못한다면, 여기에 아무것도 붙여넣지 마세요.",
+        "font-size: 14px;"
+      );
+    </script>
+  </body>
+</html>
