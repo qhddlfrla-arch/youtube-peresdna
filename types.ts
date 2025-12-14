@@ -1,54 +1,35 @@
-
-
-export interface ScriptQuote {
-  timestamp: string;
-  text: string;
+// 페르소나 관련 타입 정의
+export interface PersonaTrait {
+  category: string; // 특성 카테고리 (예: 성격, 말투, 특징 등)
+  value: string;    // 특성 값
 }
 
-export interface ScriptStage {
-  stage: string;
-  purpose: string;
-  quotes: ScriptQuote[];
-}
-
-export interface OutlineStage {
-  stage: string;
-  purpose: string;
-  details: string;
-}
-
-export interface StructuredContent {
-  title: string;
-  description: string;
-}
-
-export interface AnalysisResult {
-  keywords: string[];
-  intent: StructuredContent[];
-  viewPrediction: StructuredContent[];
-  scriptStructure?: ScriptStage[];
-}
-
-export interface ScriptLine {
-  character: string;
-  line: string;
-  imagePrompt: string;
-  timestamp?: string;
-}
-
-export interface Chapter {
+export interface Persona {
   id: string;
-  title: string;
-  purpose: string;
-  estimatedDuration: string; // 예: "10분"
-  script?: ScriptLine[]; // 생성된 대본 (선택적)
-  isGenerating?: boolean; // 생성 중 상태
+  name: string;
+  description: string;
+  age?: number;
+  gender?: string;
+  occupation?: string;
+  personality: string[];
+  speechStyle: string;
+  background?: string;
+  traits: PersonaTrait[];
+  createdAt: string;
+  updatedAt: string;
 }
 
-export interface NewPlan {
-  newIntent: StructuredContent[];
-  characters?: string[];
-  scriptWithCharacters?: ScriptLine[];
-  scriptOutline?: OutlineStage[];
-  chapters?: Chapter[]; // 챕터 기반 개요
+export interface PersonaGenerationRequest {
+  category: string;      // 페르소나 카테고리 (예: 유튜버, 강사, 캐릭터 등)
+  context?: string;      // 추가 컨텍스트
+  count?: number;        // 생성할 페르소나 수
+  specificTraits?: string[]; // 특정 특성 요구사항
+}
+
+export interface PersonaTemplate {
+  id: string;
+  name: string;
+  description: string;
+  requiredFields: string[];
+  optionalFields: string[];
 }
